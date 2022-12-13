@@ -14,11 +14,11 @@ server <- function(input, output)
 	##################################################################################
 	if (!exists("dict"))
 		{
-		dict <- as.matrix(read.csv("present_stem_1st_conj_not_dep.tsv", sep="\t", header=FALSE))
+		dict <- as.matrix(read.csv("dict/1st_conj_not_dep_present_stem.tsv", sep="\t", header=FALSE))
 		}
 	if (!exists("casePoss"))
 		{
-		casePoss <- as.matrix(read.csv("case_poss_present_stem_1st_conj_not_dep.csv", header=FALSE))
+		casePoss <- as.matrix(read.csv("case_poss/1st_conj_not_dep_present_stem.csv", header=FALSE))
 		}
 	allEndings <- casePoss[,1] # all possible endings
 	##################################################################################
