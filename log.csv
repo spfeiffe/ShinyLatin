@@ -1,0 +1,11 @@
+commit 11de034edab4d85cd3f6ee142445e6d55681fff9,Author: Steve Pfeiffer <Pfeiffer.Steven@epa.gov>,Date:   Tue Dec 13 15:44:46 2022 -0500,"    add 2nd, 3rd, and 4th conj not dep present stem to `dict/`"
+commit 47091075efd8668dbd8c3f709256c20008842313,Author: Steve Pfeiffer <Pfeiffer.Steven@epa.gov>,Date:   Tue Dec 13 14:57:44 2022 -0500,    create the folders `case_poss` and `dict` and move files into them
+commit 3a0d0495d7fe52372c5865312873180201cdf41a,Author: Steve Pfeiffer <Pfeiffer.Steven@epa.gov>,Date:   Tue Dec 13 14:02:27 2022 -0500,"    add meaning/definition for 2nd, 3rd, and 4th conjugation verbs to `adding_data/`"
+commit aa1b55308564180ceb6049e85311cb885c67529c,Author: Steve Pfeiffer <Pfeiffer.Steven@epa.gov>,Date:   Tue Dec 13 13:21:38 2022 -0500,    standardize file names in `adding_data/` again
+commit 42bba52256d26cdd4cbcd730b1fbb69b82d4b897,Author: Steve Pfeiffer <Pfeiffer.Steven@epa.gov>,Date:   Tue Dec 13 13:18:10 2022 -0500,    add principal parts of 4th conj non-dep verbs
+commit 315fdd0169eaa1084e681a361901c0971f12b830,Author: Steve Pfeiffer <Pfeiffer.Steven@epa.gov>,Date:   Tue Dec 13 12:58:43 2022 -0500,    add principal parts of 3rd conj non-dep verbs
+commit f8e76244f33970ef08e4e2ddf152a1fae10e5283,Author: Steve Pfeiffer <Pfeiffer.Steven@epa.gov>,Date:   Tue Dec 13 12:39:00 2022 -0500,    add principal parts of 2nd conj non-dep verbs
+commit 763700374b2aa9e4d9f44064e311f0f1690f7925,Author: Steve Pfeiffer <Pfeiffer.Steven@epa.gov>,Date:   Tue Dec 13 12:27:24 2022 -0500,    standardize file names in `adding_data/`
+commit bd8a246cc7d1ebfa0f782eb6eb527bdd12c51efb,Author: Steve Pfeiffer <Pfeiffer.Steven@epa.gov>,Date:   Tue Dec 13 12:14:51 2022 -0500,    add folder to organize data and add other principal parts of 1st conj non-dep verbs
+commit 261bd3216060471f0ec01af243e407b751c68650,Author: spfeiffe <60448789+spfeiffe@users.noreply.github.com>,Date:   Tue Nov 15 22:34:15 2022 -0500,    Add files via upload
+commit 81b26c64a018adcac26ce5d81c9030c92826de51,Author: spfeiffe <60448789+spfeiffe@users.noreply.github.com>,Date:   Tue Nov 15 22:32:39 2022 -0500,    Add files via upload
