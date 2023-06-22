@@ -85,69 +85,50 @@ server <- function(input, output)
 	##################################################################################
 	# Give translation-output
 	##################################################################################
-																           r$latinRoot 			<- paste0(r$thisRoot, "-")
-																		   
-																		   r$latinInflection <- paste0("-", r$thisEnding)
-																		   
-																		   r$latinConjugationRAW <- dict[which(dict[,2] == r$thisRoot), 1]
-																		   if (length(unique(r$latinConjugationRAW)) > 1)
-																				{
-																				r$latinConjugation 	<- stringi::stri_flatten(r$latinConjugationRAW , collapse=" ---OR--- ")
-																				} else	{
-																						r$latinConjugation <- unique(r$latinConjugationRAW)
-																						}
 																		   
 																		   r$case_possibilities <- casePoss[which(casePoss[,1] == r$thisEnding), 2]
-																		
-																		   r$whatCase <- stringi::stri_flatten(r$case_possibilities	[
-																																	which	(
-																																			sapply	(
-																																					r$case_possibilities,
-																																					function(X)
-																																						{
-																																						substr(X, 1, 3)
-																																						}
-																																					) == r$latinConjugation
-																																			)
-																																	]
-																												, collapse=" ---OR--- ")
 																		   
-																		   r$EnglishRootRAW <- dict[which(dict[,2] == r$thisRoot), 3]
-																		   if (length(r$EnglishRootRAW) > 1)
-																				{
-																				r$EnglishRoot <- stringi::stri_flatten(r$EnglishRootRAW, collapse=" ---OR--- ")
-																				} else	{
-																						r$EnglishRoot <- r$EnglishRootRAW
-																						}
+																		   r$englishRoot <- stri_flatten(dict[which(dict[,2] == r$thisRoot), 3], collapse=" ---OR--- ")
+													
+																		   #r$whatCase <- stringi::stri_flatten(r$case_possibilities	[
+																			#														which	(
+																			#																sapply	(
+																			#																		r$case_possibilities,
+																			#																		function(X)
+																			#																			{
+																			#																			substr(X, 1, 3)
+																			#																			}
+																			#																		) == r$latinConjugation
+																			#																)
+																			#														]
+																			#									, collapse=" ---OR--- ")
 																			
+																			print(paste0("length(r$case_possibilities) = ", length(r$case_possibilities)))
+																			
+																			dataOut <- c	(
+																							paste0("Input: '", input$userEnteredString, "'"),
+																							paste0("Latin Root: '", r$thisRoot, "-'"),
+																							paste0("English meaning: '", r$englishRoot, "'"),
+																							paste0("Latin Inflection: '-", r$thisEnding, "'"),
+																							"Case Possibilities: "
+																							)
+																							
+																			for (i in 1:length(r$case_possibilities))
+																				{
+																				dataOut <- c(dataOut, rep("", 4), r$case_possibilities[i])
+																				}
+																				
 																			output$translationGuide <- renderTable	(matrix	(
-																															nrow=6,
-																															ncol=1,
-																															data=c	(
-																																	paste0("Input: '", input$userEnteredString, "'"),
-																																	paste0("Latin Root: '", r$latinRoot, "'"),
-																																	paste0("Latin Inflection: '", r$latinInflection, "'"),
-																																	paste0("Latin Conjugation: '", r$latinConjugation, "'"),
-																																	paste0("What Case: '", r$whatCase, "'"),
-																																	paste0("English Root: '", r$EnglishRoot, "'")#,
-																																	#paste0("Suggested English Phrasing: (prototype app not yet returning this field)")
-																																	),
-																															byrow=FALSE
+																															nrow = 5,
+																															ncol = length(r$case_possibilities)+1,
+																															data = dataOut,
+																															byrow = FALSE
 																															)
 																													)
 
-
-
-
-
-
-
-
-
-
-                                        }
-															}
-												}
+																			}
+													}
+									}
 	##################################################################################
 	# End reactive stuff
 	##################################################################################
