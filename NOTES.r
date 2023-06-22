@@ -6,24 +6,8 @@ testdict <- matrix(nrow=3, ncol=3, data=c(
 
 
 
-r$case_possibilities <- r$casePossForThisConj[which(casePossForThisConj[,1] == r$thisEnding), 2]
 
 
-
-
-
-if (length(which(dict[,2] == r$thisRoot)) == 1)
-	{
-	r$thisConjugation <- dict[which(dict[,2] == r$thisRoot), 1]
-	#r$casePossForThisConj <- casePoss[which(sapply(casePoss[,2], function(X){substr(X,1,3) == "1st"})), ]
-	#r$case_possibilities <- r$casePossForThisConj[which(casePossForThisConj[,1] == r$thisEnding), 2]
-	#if (length(r$case_possibilities) > 1)
-	#	{
-	#	} else	{
-	#			}
-	} else	{
-			
-			}
 
 			hits <- dict[which(dict[,2] == r$thisRoot), ]
 			if (length(unique(hits[,1])) == 1)
@@ -32,6 +16,7 @@ if (length(which(dict[,2] == r$thisRoot)) == 1)
 				r$thisConjugation <- unique(hits[,1])
 				} else	{
 						# different conjugation
+						r$thisConjugation <- "MoreThanOneConjugation"
 						if (length(which(casePoss[,1] == r$thisEnding)) > 1)
 							{
 							# use r$thisEnding to tell them apart

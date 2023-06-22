@@ -12,6 +12,7 @@ server <- function(input, output)
 	##################################################################################
 	# Load constants
 	##################################################################################
+	require(assertthat)
 	require(stringi)
 	if (!exists("dict"))
 		{
@@ -86,9 +87,54 @@ server <- function(input, output)
 	# Give translation-output
 	##################################################################################
 																		   
-																		   r$case_possibilities <- casePoss[which(casePoss[,1] == r$thisEnding), 2]
+																		if (length(which(dict[,2] == r$thisRoot)) == 1)
+																			{
+																			r$thisConjugation <- dict[which(dict[,2] == r$thisRoot), 1]
+																			r$casePossForThisConj <- casePoss[which(sapply(casePoss[,2], function(X){substr(X,1,3) == r$thisConjugation})), ]
+																			r$case_possibilities <- r$casePossForThisConj[which(r$casePossForThisConj[,1] == r$thisEnding), 2]
+																			} else	{
+																					hits <- dict[which(dict[,2] == r$thisRoot), ]
+																					if (length(unique(hits[,1])) == 1)
+																						{
+																						r$thisConjugation <- unique(hits[,1])
+																						r$casePossForThisConj <- casePoss[which(sapply(casePoss[,2], function(X){substr(X,1,3) == r$thisConjugation})), ]
+																						r$case_possibilities <- r$casePossForThisConj[which(r$casePossForThisConj[,1] == r$thisEnding), 2]
+																						} else	{
+																								r$thisConjugation <- "MoreThanOneConjugation"
+																								r$case_possibilities <- casePoss[which(casePoss[,1] == r$thisEnding), 2]
+																								}
+																					}
 																		   
-																		   r$englishRoot <- stri_flatten(dict[which(dict[,2] == r$thisRoot), 3], collapse=" ---OR--- ")
+																		   prepend <- function(a, b)
+																				{
+																				assert_that(class(a) == "character")
+																				assert_that(class(b) == "character")
+																				assert_that(length(a) == length(b))
+																				theOutputRAW <- character(0)
+																				for (i in 1:length(a))
+																					{
+																					theOutputRAW <- c(theOutputRAW, paste0(a[i], b[i]))
+																					}
+																				theOutput <- na.omit(theOutputRAW)
+																				if (length(theOutput) != length(a))
+																					{
+																					stop("something went wrong with the prepend() function")
+																					}
+																				return(theOutput)
+																				}
+																			# prepend(letters[1:3], as.character(1:3))
+																				
+																			r$englishRoot <- stri_flatten	(
+																											prepend	(
+																													paste0(dict[which(dict[,2] == r$thisRoot), 1], "Conj: "),
+																													dict[which(dict[,2] == r$thisRoot), 3]
+																													),
+																											collapse=" ---OR--- "
+																											)
+																			
+																		   #r$englishRoot <- stri_flatten	(
+																			#								dict[which(dict[,2] == r$thisRoot), 3], collapse=" ---OR--- "
+																			#								)
 													
 																		   #r$whatCase <- stringi::stri_flatten(r$case_possibilities	[
 																			#														which	(
