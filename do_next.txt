@@ -1,0 +1,19 @@
+in casePoss ("all_conj_not_dep_present_stem.csv"), for all 4 conj:
+
+already have these:
+
+	present indicative active
+	imperfect indicative active
+	future indicative active
+
+	present subjunctive active
+	imperfect subjunctive active
+
+so add these next:
+
+	present indicative passive
+	imperfect indicative passive
+	future indicative passive
+	
+	present subjunctive passive
+	imperfect subjunctive passive
