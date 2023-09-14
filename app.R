@@ -86,25 +86,7 @@ server <- function(input, output)
 	##################################################################################
 	# Give translation-output
 	##################################################################################
-																		   
-																		if (length(which(dict[,2] == r$thisRoot)) == 1)
-																			{
-																			r$thisConjugation <- dict[which(dict[,2] == r$thisRoot), 1]
-																			r$casePossForThisConj <- casePoss[which(sapply(casePoss[,2], function(X){substr(X,1,3) == r$thisConjugation})), ]
-																			r$case_possibilities <- r$casePossForThisConj[which(r$casePossForThisConj[,1] == r$thisEnding), 2]
-																			} else	{
-																					hits <- dict[which(dict[,2] == r$thisRoot), ]
-																					if (length(unique(hits[,1])) == 1)
-																						{
-																						r$thisConjugation <- unique(hits[,1])
-																						r$casePossForThisConj <- casePoss[which(sapply(casePoss[,2], function(X){substr(X,1,3) == r$thisConjugation})), ]
-																						r$case_possibilities <- r$casePossForThisConj[which(r$casePossForThisConj[,1] == r$thisEnding), 2]
-																						} else	{
-																								r$thisConjugation <- "MoreThanOneConjugation"
-																								r$case_possibilities <- casePoss[which(casePoss[,1] == r$thisEnding), 2]
-																								}
-																					}
-																		   
+																		
 																		   prepend <- function(a, b)
 																				{
 																				assert_that(class(a) == "character")
@@ -131,47 +113,54 @@ server <- function(input, output)
 																													),
 																											collapse=" ---OR--- "
 																											)
-																			
-																		   #r$englishRoot <- stri_flatten	(
-																			#								dict[which(dict[,2] == r$thisRoot), 3], collapse=" ---OR--- "
-																			#								)
-													
-																		   #r$whatCase <- stringi::stri_flatten(r$case_possibilities	[
-																			#														which	(
-																			#																sapply	(
-																			#																		r$case_possibilities,
-																			#																		function(X)
-																			#																			{
-																			#																			substr(X, 1, 3)
-																			#																			}
-																			#																		) == r$latinConjugation
-																			#																)
-																			#														]
-																			#									, collapse=" ---OR--- ")
-																			
-																			#print(paste0("length(r$case_possibilities) = ", length(r$case_possibilities)))
-																			
-																			dataOut <- c	(
-																							paste0("Input: '", input$userEnteredString, "'"),
-																							paste0("Latin Root: '", r$thisRoot, "-'"),
-																							paste0("English meaning: '", r$englishRoot, "'"),
-																							paste0("Latin Inflection: '-", r$thisEnding, "'"),
-																							"Case Possibilities: "
-																							)
-																							
-																			for (i in 1:length(r$case_possibilities))
-																				{
-																				dataOut <- c(dataOut, rep("", 4), r$case_possibilities[i])
-																				}
-																				
-																			output$translationGuide <- renderTable	(matrix	(
-																															nrow = 5,
-																															ncol = length(r$case_possibilities)+1,
-																															data = dataOut,
-																															byrow = FALSE
+																		
+																		
+																		if (length(which(dict[,2] == r$thisRoot)) == 1)
+																			{
+																			r$thisConjugation <- dict[which(dict[,2] == r$thisRoot), 1]
+																			r$casePossForThisConj <- casePoss[which(sapply(casePoss[,2], function(X){substr(X,1,3) == r$thisConjugation})), ]
+																			r$case_possibilities <- r$casePossForThisConj[which(r$casePossForThisConj[,1] == r$thisEnding), 2]
+																			} else	{
+																					hits <- dict[which(dict[,2] == r$thisRoot), ]
+																					if (length(unique(hits[,1])) == 1)
+																						{
+																						r$thisConjugation <- unique(hits[,1])
+																						r$casePossForThisConj <- casePoss[which(sapply(casePoss[,2], function(X){substr(X,1,3) == r$thisConjugation})), ]
+																						r$case_possibilities <- r$casePossForThisConj[which(r$casePossForThisConj[,1] == r$thisEnding), 2]
+																						} else	{
+																								r$thisConjugation <- "MoreThanOneConjugation"
+																								xx <- sapply(unlist(strsplit(r$englishRoot, split=" ---OR--- ")), function(X){substr(X,1,3)})
+																								r$case_possibilities <- casePoss[which(casePoss[,1]==r$thisEnding),2][which(sapply(casePoss[which(casePoss[,1]==r$thisEnding),2], function(X){substr(X,1,3)}) %in% xx)]
+																								r$englishRoot_2 <- unlist(strsplit(r$englishRoot, split=" ---OR--- "))[which(xx %in% sapply(r$case_possibilities,function(X){substr(X,1,3)}))] 
+																								r$englishRoot_3 <- substr(r$englishRoot_2, 10, nchar(r$englishRoot_2)) 
+																								}
+																					}
+																		
+																		if (length(r$case_possibilities) == 0)
+																			{
+																			output$translationGuide <- renderText(paste0("The Latin root `", r$thisRoot, "` is in the dictionary, but does not have the ending `", r$thisEnding, "`"))  
+																			} else	{
+																					dataOut <- c	(
+																									paste0("Input: '", input$userEnteredString, "'"),
+																									paste0("Latin Root: '", r$thisRoot, "-'"),
+																									paste0("English meaning: '", r$englishRoot_3, "'"),
+																									paste0("Latin Inflection: '-", r$thisEnding, "'"),
+																									"Case Possibilities: "
+																									)
+																									
+																					for (i in 1:length(r$case_possibilities))
+																						{
+																						dataOut <- c(dataOut, rep("", 4), r$case_possibilities[i])
+																						}
+																						
+																					output$translationGuide <- renderTable	(matrix	(
+																																	nrow = 5,
+																																	ncol = length(r$case_possibilities)+1,
+																																	data = dataOut,
+																																	byrow = FALSE
+																																	)
 																															)
-																													)
-
+																					}
 																			}
 													}
 									}
