@@ -16,7 +16,7 @@ server <- function(input, output)
 	require(stringi)
 	if (!exists("dict"))
 		{
-		dict <- as.matrix(read.table("dict/all_regular_non_dep_present_stem.tsv", header=FALSE, fileEncoding="UTF-8-BOM", sep='\t', quote='"')[,1:3]) # conj, root, meaning 
+		dict <- as.matrix(read.table("dict/all_regular_non_dep_present_stem.tsv", header=FALSE, fileEncoding="UTF-8-BOM", sep='\t', quote='"')[,1:4]) # conj, root, meaning, present_stem/perfect_stem 
 		}
 	if (!exists("casePoss"))
 		{
@@ -50,7 +50,7 @@ server <- function(input, output)
 											#print(paste0("r$matchingEndings = ", r$matchingEndings))
 											if (length(r$matchingEndings) == 0)
 											  {
-											  output$translationGuide <- renderText('This ending of this word does match any inflections which this app knows - make sure it is spelled correctly, is a first conjugation verb, and is in a form using the present stem.')
+											  output$translationGuide <- renderText('This ending of this word does match any inflections which this app knows - make sure it is spelled correctly, is a regular verb, and is in a form using the present stem.')
 											  } else {
 																if (length(r$matchingEndings) == 1)
 																		{
@@ -81,7 +81,7 @@ server <- function(input, output)
 																#print(paste0("r$thisRoot = ", r$thisRoot))
 																if (!(r$thisRoot %in% dict[,2]))
 																  {
-																  output$translationGuide <- renderText("This word does not appear to be in this app's dictionary - make sure it is spelled correctly, is a first conjugation verb, and is in a form using the present stem.")
+																  output$translationGuide <- renderText("This word does not appear to be in this app's dictionary - make sure it is spelled correctly, is a regular verb, and is in a form using the present stem.")
 																  } else  {
 	##################################################################################
 	# Give translation-output
@@ -120,6 +120,7 @@ server <- function(input, output)
 																			r$thisConjugation <- dict[which(dict[,2] == r$thisRoot), 1]
 																			r$casePossForThisConj <- casePoss[which(sapply(casePoss[,2], function(X){substr(X,1,3) == r$thisConjugation})), ]
 																			r$case_possibilities <- r$casePossForThisConj[which(r$casePossForThisConj[,1] == r$thisEnding), 2]
+																			r$englishRoot_2 <- r$englishRoot
 																			} else	{
 																					hits <- dict[which(dict[,2] == r$thisRoot), ]
 																					if (length(unique(hits[,1])) == 1)
@@ -127,12 +128,12 @@ server <- function(input, output)
 																						r$thisConjugation <- unique(hits[,1])
 																						r$casePossForThisConj <- casePoss[which(sapply(casePoss[,2], function(X){substr(X,1,3) == r$thisConjugation})), ]
 																						r$case_possibilities <- r$casePossForThisConj[which(r$casePossForThisConj[,1] == r$thisEnding), 2]
+																						r$englishRoot_2 <- r$englishRoot
 																						} else	{
 																								r$thisConjugation <- "MoreThanOneConjugation"
 																								xx <- sapply(unlist(strsplit(r$englishRoot, split=" ---OR--- ")), function(X){substr(X,1,3)})
 																								r$case_possibilities <- casePoss[which(casePoss[,1]==r$thisEnding),2][which(sapply(casePoss[which(casePoss[,1]==r$thisEnding),2], function(X){substr(X,1,3)}) %in% xx)]
 																								r$englishRoot_2 <- unlist(strsplit(r$englishRoot, split=" ---OR--- "))[which(xx %in% sapply(r$case_possibilities,function(X){substr(X,1,3)}))] 
-																								r$englishRoot_3 <- substr(r$englishRoot_2, 10, nchar(r$englishRoot_2)) 
 																								}
 																					}
 																		
@@ -143,7 +144,7 @@ server <- function(input, output)
 																					dataOut <- c	(
 																									paste0("Input: '", input$userEnteredString, "'"),
 																									paste0("Latin Root: '", r$thisRoot, "-'"),
-																									paste0("English meaning: '", r$englishRoot_3, "'"),
+																									paste0("English meaning: '", substr(r$englishRoot_2, 10, nchar(r$englishRoot_2)), "'"),
 																									paste0("Latin Inflection: '-", r$thisEnding, "'"),
 																									"Case Possibilities: "
 																									)
