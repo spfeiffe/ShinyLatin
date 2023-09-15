@@ -16,11 +16,11 @@ server <- function(input, output)
 	require(stringi)
 	if (!exists("dict"))
 		{
-		dict <- as.matrix(read.table("dict/all_regular_non_dep_present_stem.tsv", header=FALSE, fileEncoding="UTF-8-BOM", sep='\t', quote='"')[,1:4]) # conj, root, meaning, present_stem/perfect_stem 
+		dict <- as.matrix(read.table("dict/all_regular_non_dep.tsv", header=FALSE, fileEncoding="UTF-8-BOM", sep='\t', quote='"')[,1:4]) # conj, root, meaning, present_stem/perfect_stem 
 		}
 	if (!exists("casePoss"))
 		{
-		casePoss <- as.matrix(read.csv("case_poss/all_conj_not_dep_present_stem.csv", header=FALSE))
+		casePoss <- as.matrix(read.csv("case_poss/all_conj_not_dep.csv", header=FALSE))
 		}
 	allEndings <- unique(casePoss[,1]) # all possible endings
 	##################################################################################

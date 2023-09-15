@@ -24,11 +24,13 @@ already have these:
 	
 	(this app doesn't really handle impersonal verbs (licet, factum est, pluit, licere dico) differently)
 	
-so do next:
-
+doing now:
 	forms made with the perfect stem
+	
+still to-do:
 	supine
 	participle
+	future participles
 	deponent
 	semi-deponent, 
 	irregular verbs

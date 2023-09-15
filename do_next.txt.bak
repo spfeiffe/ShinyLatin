@@ -22,14 +22,14 @@ already have these:
 	
 	-io verbs of the 3rd conjugation
 	
-so do next:
-
+	(this app doesn't really handle impersonal verbs (licet, factum est, pluit, licere dico) differently)
+	
+doing now:
 	forms made with the perfect stem
+	
+still to-do:
 	supine
 	participle
-	
-	impersonal verbs
 	deponent
 	semi-deponent, 
 	irregular verbs
-	... and anything else.
