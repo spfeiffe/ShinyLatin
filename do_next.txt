@@ -26,8 +26,9 @@ already have these:
 	
 	forms made with the perfect stem
 	
-still to-do:
 	PPP
+	
+still to-do:
 	supine
 	deponent
 	semi-deponent, 

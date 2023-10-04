@@ -43,7 +43,8 @@ server <- function(input, output)
 					}
 				return(FALSE)
 				}
-			if endsWithAnyOfThese	(
+			if (
+				endsWithAnyOfThese	(
 									input$userEnteredString,
 									unique	(
 											c	(
@@ -80,17 +81,19 @@ server <- function(input, output)
 												)
 											)
 									)
+				)
 										{
-										r$proposedRoot <- substr(input$userEnteredString, 1, (nchar(input$userEnteredString)-nchar(theNounEnding)))  
+										r$proposedRoot <- substr(input$userEnteredString, 1, (nchar(input$userEnteredString)-nchar(r$theNounEnding)))  
 										if (r$proposedRoot %in% dict[which(dict[,4]=="PPP"), 2])
 											{
+											r$matchIndices <- which(dict[,2] == r$proposedRoot)
 											output$translationGuide <- renderTable	(	matrix	(
 																								nrow = 5,
 																								ncol = 1,
 																								data = c	(
 																											paste0("Input: '", input$userEnteredString, "'"),
 																											paste0("Latin Root: '", r$proposedRoot, "-'"),
-																											paste0("English meaning: '", stri_flatten(dict[which(dict[,4]=="PPP"), 3], collapse="; "), "'"), 
+																											paste0("English meaning: '", stri_flatten(unique(dict[r$matchIndices, 3]), collapse="; "), "'"), 
 																											paste0("Latin Inflection: '-", r$theNounEnding, "'"),
 																											"Case Possibilities: PerfectParticiplePassive"
 																											)
