@@ -50,7 +50,7 @@ server <- function(input, output)
 											#print(paste0("r$matchingEndings = ", r$matchingEndings))
 											if (length(r$matchingEndings) == 0)
 											  {
-											  output$translationGuide <- renderText('This ending of this word does match any inflections which this app knows - make sure it is spelled correctly, is a regular verb, and is in a form using the present stem.')
+											  output$translationGuide <- renderText('This ending of this word does match any inflections which this app knows - make sure it is spelled correctly, is a regular verb, and if in a form derived from the PPP, does include a space or linking verb.')
 											  } else {
 																if (length(r$matchingEndings) == 1)
 																		{
@@ -81,7 +81,7 @@ server <- function(input, output)
 																#print(paste0("r$thisRoot = ", r$thisRoot))
 																if (!(r$thisRoot %in% dict[,2]))
 																  {
-																  output$translationGuide <- renderText("This word does not appear to be in this app's dictionary - make sure it is spelled correctly, is a regular verb, and is in a form using the present stem.")
+																  output$translationGuide <- renderText("This word does not appear to be in this app's dictionary - make sure it is spelled correctly, is a regular verb, and if in a form derived from the PPP, does include a space or linking verb.")
 																  } else  {
 	##################################################################################
 	# Give translation-output

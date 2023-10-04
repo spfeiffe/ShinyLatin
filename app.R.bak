@@ -20,7 +20,7 @@ server <- function(input, output)
 		}
 	if (!exists("casePoss"))
 		{
-		casePoss <- as.matrix(read.csv("case_poss/all_conj_not_dep_present_stem.csv", header=FALSE))
+		casePoss <- as.matrix(read.csv("case_poss/all_conj_not_dep.csv", header=FALSE))
 		}
 	allEndings <- unique(casePoss[,1]) # all possible endings
 	##################################################################################
