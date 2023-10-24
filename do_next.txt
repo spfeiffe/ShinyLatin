@@ -18,6 +18,7 @@ already have these:
 	
 	imperative forms
 	infinitive 
+	
 	(gerund, gerundive, present participle, and future participle are more like nouns, so excluding them)
 	
 	-io verbs of the 3rd conjugation
@@ -28,8 +29,9 @@ already have these:
 	
 	PPP
 	
+	supine (PPP + -um, -u)
+	
 still to-do:
-	supine
 	deponent
 	semi-deponent, 
 	irregular verbs
