@@ -31,7 +31,8 @@ already have these:
 	
 	supine (PPP + -um, -u)
 	
+	(note: irregular verbs)
+	
 still to-do:
 	deponent
-	semi-deponent, 
-	irregular verbs
+	semi-deponent

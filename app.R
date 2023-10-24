@@ -167,7 +167,31 @@ server <- function(input, output)
 																													#print(paste0("r$thisRoot = ", r$thisRoot))
 																							if (!(r$thisRoot %in% dict[,2]))
 																								{
-																								output$translationGuide <- renderText("This word does not appear to be in this app's dictionary - make sure it is spelled correctly, is a regular verb, and if in a form derived from the PPP, does include a space or linking verb.")
+																								#output$translationGuide <- renderText("This word does not appear to be in this app's dictionary - make sure it is spelled correctly, is a regular verb, and if in a form derived from the PPP, does include a space or linking verb.")
+																								output$translationGuide <- renderTable(matrix(ncol=22,data=c(
+																																							"This word does not appear to be in this app's dictionary -- make sure that it is spelled correctly, does not include any spaces or linking verbs, and is not one of the following irregular verbs:", 
+																																							"#",
+																																							"sum, esse, fui, futurus",
+																																							"#",
+																																							"eo, ire, ivi (ii), itum",
+																																							"fio, fieri, factus sum",
+																																							"fero, ferre, tuli, latus",
+																																							"#",
+																																							"possum, posse, potui",
+																																							"volo, velle, volui",
+																																							"nolo, nolle, nolui",
+																																							"malo, malle, malui",
+																																							"#",
+																																							"coepi, coepisse, coeptus",
+																																							"memini, meminisse",
+																																							"odi, odisse, osus",
+																																							"#",
+																																							"inquam",
+																																							"#",
+																																							"ajo",
+																																							"#",
+																																							"quaeso"
+																																							)))
 																								} else	{
 														##################################################################################
 														# Give translation-output
