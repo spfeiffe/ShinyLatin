@@ -12,7 +12,7 @@ for (X in r)
 						"2nd_deponent",
 						substr(X, 2, unlist(gregexpr(",",X))[1]-3),  # drop the -or to form the present stem.
 						substr(X, unlist(gregexpr(" :: ", X))+4, nchar(X)),
-						"PPP"
+						"present_stem"
 						)
 					)
 	}
@@ -20,28 +20,19 @@ write.csv(Mout, "Mout.csv")
 
 
 
-
-
-
-
-
 Mout <- matrix(nrow=0, ncol=4)
 for (X in r)
 	{
-	if (substr(X, unlist(gregexpr(" V ", X))+3, unlist(gregexpr(" V ", X))+7) == "(1st)") 
-		{
-		Mout <- rbind	(
-						Mout,
-						c	(
-							"1st_deponent",
-							substr(X, unlist(gregexpr(",", X))[1]+2, unlist(gregexpr(",", X))[2]-2),  # drop the -i to form the perfect stem. 
-							substr(X, unlist(gregexpr(" :: ", X))+4, nchar(X)),
-							"perfect_stem"
-							)
+	Mout <- rbind	(
+					Mout,
+					c	(
+						"1st_deponent",
+						substr(X, unlist(gregexpr(",", X))[1]+2, unlist(gregexpr(",", X))[2]-2),  # drop the -i to form the perfect stem. 
+						substr(X, unlist(gregexpr(" :: ", X))+4, nchar(X)),
+						"perfect_stem"
 						)
-		}
+					)
 	}
-head(Mout)
 write.csv(Mout, "Mout.csv")
 
 

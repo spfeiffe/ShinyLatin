@@ -1,0 +1,10 @@
+name: demo_latin_
+title:
+username: sptest
+account: sptest
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 10473726
+bundleId: 7908171
+url: https://sptest.shinyapps.io/demo_latin_/
+version: 1

@@ -31,6 +31,7 @@ server <- function(input, output)
 	##################################################################################
 	# Handle PPPs separately because they are noun-like
 	##################################################################################
+			#output$translationGuide <- renderText("Waiting... ")
 			endsWithAnyOfThese <- function(X, endings)
 				{
 				for (i in 1:length(endings))
