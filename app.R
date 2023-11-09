@@ -16,7 +16,7 @@ server <- function(input, output)
 	require(stringi)
 	if (!exists("dict"))
 		{
-		dict <- as.matrix(read.table("dict/all_regular_non_dep.tsv", header=FALSE, fileEncoding="UTF-8-BOM", sep='\t', quote='"')[,1:4]) # conj, root, meaning, present_stem/perfect_stem/PPP 
+		dict <- as.matrix(read.table("dict/all_regular.tsv", header=FALSE, fileEncoding="UTF-8-BOM", sep='\t', quote='"')[,1:4]) # conj, root, meaning, present_stem/perfect_stem/PPP 
 		}
 	if (!exists("casePoss"))
 		{
