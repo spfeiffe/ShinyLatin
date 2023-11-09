@@ -4,12 +4,59 @@
 #allPossibleLatinRoots <- testdict[which(sapply(testdict, function(X){startsWith("Mickey", X)}))]
 #thisLatinRoot <- allPossibleLatinRoots[max(sapply(allPossibleLatinRoots, nchar))]
 #
-if (length(which(sapply(testdict, function(X){startsWith(input$userEnteredString, X)}))) != 0) 
+
+ui <- fluidPage	(
+				textInput	(
+							"userEnteredString",
+							"Enter exact Latin verb(-form) here:",
+							value=""
+							),
+				uiOutput("translationGuide")
+				)
+
+server <- function(input, output)
 	{
-	r$allPossibleLatinRoots <- testdict[which(sapply(testdict, function(X){startsWith(input$userEnteredString, X)}))]
-	r$thisLatinRoot <- r$allPossibleLatinRoots[max(sapply(r$allPossibleLatinRoots, nchar))]
-	if (length(r$thisLatinRoot) > 1)
+	##################################################################################
+	# Load constants
+	##################################################################################
+	require(assertthat)
+	require(stringi)
+	if (!exists("dict"))
 		{
-		output$translationGuide <- renderText("Something strange this way went... ")
+		dict <- as.matrix(read.table("dict/all_regular.tsv", header=FALSE, fileEncoding="UTF-8-BOM", sep='\t', quote='"')[,1:4]) # conj, root, meaning, present_stem/perfect_stem/PPP 
 		}
+	if (!exists("casePoss"))
+		{
+		casePoss <- as.matrix(read.csv("case_poss/all_conj_not_dep.csv", header=FALSE))
+		}
+	allEndings <- unique(casePoss[,1]) # all possible endings
+	##################################################################################
+	# Begin reactive stuff
+	##################################################################################
+	r <- reactiveValues()
+	observe	({
+			if (nchar(trimws(input$userEnteredString)) == 0)
+				{
+				output$translationGuide <- renderText('Waiting.....')
+				} else	{
+						if (length(which(sapply(dict[,2], function(X){startsWith(input$userEnteredString, X)}))) != 0) 
+							{
+							r$allPossibleLatinRoots <- dict[which(sapply(dict, function(X){startsWith(input$userEnteredString, X)}))]
+							r$thisLatinRoot <- r$allPossibleLatinRoots[which(r$allPossibleLatinRoots == r$allPossibleLatinRoots[max(sapply(r$allPossibleLatinRoots, nchar))])] 
+							output$translationGuide <- renderText(paste0("r$thisLatinRoot = ", r$thisLatinRoot))
+							#if (length(r$thisLatinRoot) == 1)
+							#	{
+							#	output$translationGuide <- renderText(paste0(" r$thisLatinRoot = ", r$thisLatinRoot))
+							#	} else	{
+							#			output$translationGuide <- renderText(paste0("Something strange this way went... r$thisLatinRoot = ", r$thisLatinRoot))
+							#			}
+							} else	{
+									output$translationGuide <- renderText("This word does not appear to be in this app's dictionary - make sure it is spelled correctly, is a regular verb, and if in a form derived from the PPP, does include a space or linking verb.") 
+									}
+						}
+			})
 	}
+	
+shinyApp(ui=ui, server=server)
+
+
