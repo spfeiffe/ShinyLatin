@@ -56,13 +56,16 @@ server <- function(input, output)
 										}
 							r$thisLatinRoot <- r$APLRWANTWI[which(sapply(r$APLRWANTWI,nchar) == max(sapply(r$APLRWANTWI,nchar)))]
 							r$thisLatinEnding <- substr(input$userEnteredString, nchar(r$thisLatinRoot)+1, nchar(input$userEnteredString))
-							
-							
 							r$thisLatinRootInfo		<- r$allPossibleLatinRootRows[which(r$allPossibleLatinRootRows[,2] == r$thisLatinRoot), ] 
-							[1] "3rd"          "orr"          "yada"         "perfect_stem"
-							[2] "3rd_deponent" "orr"          "blah"         "present_stem"
-
-
+							# [1] "3rd"          "orr"          "yada"         "perfect_stem"
+							# [2] "3rd_deponent" "orr"          "blah"         "present_stem"
+							if ("matrix" %in% class(r$thisLatinRootInfo))
+								{
+								for (i in 1:nrow(thisLatinRootInfo))
+									{
+									
+									}
+								}
 							
 							
 							r$dictHits <- dict[which(dict[,2] == r$thisLatinRoot), ]
