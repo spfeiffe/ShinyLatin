@@ -28,7 +28,7 @@ server <- function(input, output)
 		}
 	if (!exists("casePoss"))
 		{
-		casePoss <- as.matrix(read.csv("case_poss/all_conj_not_dep.csv", header=FALSE))
+		casePoss <- as.matrix(read.csv("case_poss/all_conj_not_dep.csv", header=FALSE)[,1:3]) # inflection, formed from present stem or perfect stem, ConjTenseMoodVoicePersonNumber 
 		}
 	allEndings <- unique(casePoss[,1]) # all possible endings
 	##################################################################################
@@ -46,16 +46,27 @@ server <- function(input, output)
 						# the next line takes a couple of seconds to execute 
 						if (length(which(sapply(dict[,2], function(X){startsWith(input$userEnteredString, X)}))) != 0) 
 							{
-							r$allPossibleLatinRoots <- unique(dict[which(sapply(dict[,2], function(X){startsWith(input$userEnteredString, X)})), 2]) 
-							if (length(which(sapply(r$allPossibleLatinRoots,nchar) == nchar(input$userEnteredString))) > 0)
+							r$allPossibleLatinRootRows <- unique(dict[which(sapply(dict[,2], function(X){startsWith(input$userEnteredString, X)})), ]) 
+							if (length(which(sapply(r$allPossibleLatinRootRows[,2],nchar) == nchar(input$userEnteredString))) > 0)
 								{
 								r$APLRWANTWI <- # All Possible Latin Roots Which Are Not The Word Itself 
-								  r$allPossibleLatinRoots[-which(sapply(r$allPossibleLatinRoots,nchar) == nchar(input$userEnteredString))]
+								  r$allPossibleLatinRootRows[-which(sapply(r$allPossibleLatinRootRows[,2],nchar) == nchar(input$userEnteredString)), 2]
 								} else	{
-										r$APLRWANTWI <- r$allPossibleLatinRoots
+										r$APLRWANTWI <- r$allPossibleLatinRootRows[,2]
 										}
 							r$thisLatinRoot <- r$APLRWANTWI[which(sapply(r$APLRWANTWI,nchar) == max(sapply(r$APLRWANTWI,nchar)))]
 							r$thisLatinEnding <- substr(input$userEnteredString, nchar(r$thisLatinRoot)+1, nchar(input$userEnteredString))
+							
+							
+							r$possibleConjugation		<- r$allPossibleLatinRootRows[which(r$allPossibleLatinRootRows[,2] == r$thisLatinRoot), 1] 
+							r$possibleEnglishMeaning	<- r$allPossibleLatinRootRows[which(r$allPossibleLatinRootRows[,2] == r$thisLatinRoot), 3] 
+							r$possiblePrincipalPart		<- r$allPossibleLatinRootRows[which(r$allPossibleLatinRootRows[,2] == r$thisLatinRoot), 4] 
+							[1] "3rd"          "orr"          "yada"         "perfect_stem"
+							[2] "3rd_deponent" "orr"          "blah"         "present_stem"
+
+
+							
+							
 							r$dictHits <- dict[which(dict[,2] == r$thisLatinRoot), ]
 							if ("matrix" %in% class(r$dictHits)) # 2 or more rows returned
 								{
@@ -75,6 +86,10 @@ server <- function(input, output)
 								{
 								r$outMat <- rbind(r$outMat, r$conjAndPP[i])
 								}
+							print(r$outMat)
+							print("#")
+							print("#")
+							print("#")
 							output$translationGuide <- renderTable	(
 																	r$outMat,
 																	#rownames=TRUE,

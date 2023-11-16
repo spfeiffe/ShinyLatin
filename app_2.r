@@ -56,20 +56,34 @@ server <- function(input, output)
 										}
 							r$thisLatinRoot <- r$APLRWANTWI[which(sapply(r$APLRWANTWI,nchar) == max(sapply(r$APLRWANTWI,nchar)))]
 							r$thisLatinEnding <- substr(input$userEnteredString, nchar(r$thisLatinRoot)+1, nchar(input$userEnteredString))
+							r$dictHits <- dict[which(dict[,2] == r$thisLatinRoot), ]
+							if ("matrix" %in% class(r$dictHits)) # 2 or more rows returned
+								{
+								r$conjAndPP <- character(0)
+								for (i in 1:nrow(r$dictHits))
+									{
+									r$conjAndPP <- c	(
+														r$conjAndPP,
+														stringi::stri_flatten(c(r$dictHits[i,1], r$dictHits[i,4]), collapse=" ") 
+														)
+									}
+								} else	{ # 1 row returned
+										r$conjAndPP <- stringi::stri_flatten(c(r$dictHits[1], r$dictHits[4]), collapse=" ")
+										}
+							r$outMat <- matrix(nrow=2, ncol=1, data=c(paste0(r$thisLatinRoot, "-"), paste0("-", r$thisLatinEnding))) 
+							for (i in 1:length(r$conjAndPP))
+								{
+								r$outMat <- rbind(r$outMat, r$conjAndPP[i])
+								}
+							print(r$outMat)
+							print("#")
+							print("#")
+							print("#")
 							output$translationGuide <- renderTable	(
-																	matrix	(
-																			nrow = 2,
-																			ncol = 1,
-																			data = c	(
-							#															"a", "b"
-																						paste0(r$thisLatinRoot, "-"), 
-																						paste0("-", r$thisLatinEnding) 
-																						)#, 
-																			#byrow=FALSE
-																			)
+																	r$outMat,
+																	#rownames=TRUE,
+																	colnames=FALSE
 																	)
-							print(paste0("r$thisLatinRoot: ", r$thisLatinRoot, "-"))
-							print(paste0("r$thisLatinEnding = -", r$thisLatinEnding))
 							} else	{
 									output$translationGuide <- renderText("This word does not appear to be in this app's dictionary - make sure it is spelled correctly, is a regular verb, and if in a form derived from the PPP, does not include a space or linking verb.") 
 									}
