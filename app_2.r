@@ -36,11 +36,13 @@ server <- function(input, output)
 	##################################################################################
 	r <- reactiveValues()
 	observe	({
-			output$translationGuide <- renderText(paste0("input$userEnteredString = ", input$userEnteredString)) 
 			if (nchar(trimws(input$userEnteredString)) == 0)
 				{
 				output$translationGuide <- renderText('Waiting.....')
 				} else	{
+						#################################################################################################
+						#  Get the Latin root and ending #
+						#################################################################################################
 						# the next line takes a couple of seconds to execute 
 						if (length(which(sapply(dict[,2], function(X){startsWith(input$userEnteredString, X)}))) != 0) 
 							{
@@ -53,7 +55,21 @@ server <- function(input, output)
 										r$APLRWANTWI <- r$allPossibleLatinRoots
 										}
 							r$thisLatinRoot <- r$APLRWANTWI[which(sapply(r$APLRWANTWI,nchar) == max(sapply(r$APLRWANTWI,nchar)))]
-							output$translationGuide <- renderText(paste0(" r$thisLatinRoot = ", r$thisLatinRoot))
+							r$thisLatinEnding <- substr(input$userEnteredString, nchar(r$thisLatinRoot)+1, nchar(input$userEnteredString))
+							output$translationGuide <- renderTable	(
+																	matrix	(
+																			nrow = 2,
+																			ncol = 1,
+																			data = c	(
+							#															"a", "b"
+																						paste0(r$thisLatinRoot, "-"), 
+																						paste0("-", r$thisLatinEnding) 
+																						)#, 
+																			#byrow=FALSE
+																			)
+																	)
+							print(paste0("r$thisLatinRoot: ", r$thisLatinRoot, "-"))
+							print(paste0("r$thisLatinEnding = -", r$thisLatinEnding))
 							} else	{
 									output$translationGuide <- renderText("This word does not appear to be in this app's dictionary - make sure it is spelled correctly, is a regular verb, and if in a form derived from the PPP, does not include a space or linking verb.") 
 									}
