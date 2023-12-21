@@ -1,30 +1,4 @@
-e,formed_from_present_stem,3IO present imperative active singular
-ite,formed_from_present_stem,3IO present imperative active plural
-ere,formed_from_present_stem,3IO present infinitive active
-are,formed_from_present_stem,1st present infinitive active
-ere,formed_from_present_stem,2nd present infinitive active
-ere,formed_from_present_stem,3rd present infinitive active
-ire,formed_from_present_stem,4th present infinitive active
-ari,formed_from_present_stem,1st present infinitive passive
-eri,formed_from_present_stem,2nd present infinitive passive
-i,formed_from_present_stem,3rd present infinitive passive
-ire,formed_from_present_stem,4th present infinitive passive
 a,formed_from_present_stem,1st imperative active singular
-ate,formed_from_present_stem,1st imperative active plural
-e,formed_from_present_stem,2nd imperative active singular
-ete,formed_from_present_stem,2nd imperative active plural
-e,formed_from_present_stem,3rd imperative active singular
-ite,formed_from_present_stem,3rd imperative active plural
-i,formed_from_present_stem,4th imperative active singular
-ite,formed_from_present_stem,4th imperative active plural
-are,formed_from_present_stem,1st imperative passive singular
-amini,formed_from_present_stem,1st imperative passive plural
-ere,formed_from_present_stem,2nd imperative passive singular
-emini,formed_from_present_stem,2nd imperative passive plural
-ere,formed_from_present_stem,3rd imperative passive singular
-imini,formed_from_present_stem,3rd imperative passive plural
-ire,formed_from_present_stem,4th imperative passive singular
-imini,formed_from_present_stem,4th imperative passive plural
 abam,formed_from_present_stem,1st imperfect indicative active 1stPerson singular
 abamini,formed_from_present_stem,1st imperfect indicative passive 2ndPerson plural
 abamur,formed_from_present_stem,1st imperfect indicative passive 1stPerson plural
@@ -51,6 +25,7 @@ abunt,formed_from_present_stem,1st future indicative active 3rdPerson plural
 abuntur,formed_from_present_stem,1st future indicative passive 3rdPerson plural
 am,formed_from_present_stem,3rd future indicative active 1stPerson singular
 am,formed_from_present_stem,3rd present subjunctive active 1stPerson singular
+amini,formed_from_present_stem,1st imperative passive plural
 amini,formed_from_present_stem,1st present indicative passive 2ndPerson plural
 amini,formed_from_present_stem,3rd present subjunctive passive 2ndPerson plural
 amur,formed_from_present_stem,1st present indicative passive 1stPerson plural
@@ -63,6 +38,8 @@ antur,formed_from_present_stem,1st present indicative passive 3rdPerson plural
 antur,formed_from_present_stem,3rd present subjunctive passive 3rdPerson plural
 ar,formed_from_present_stem,3rd future indicative passive 1stPerson singular
 ar,formed_from_present_stem,3rd present subjunctive passive 1stPerson singular
+are,formed_from_present_stem,1st present infinitive active
+are,formed_from_present_stem,1st imperative passive singular
 arem,formed_from_present_stem,1st imperfect subjunctive active 1stPerson singular
 aremini,formed_from_present_stem,1st imperfect subjunctive passive 2ndPerson plural
 aremur,formed_from_present_stem,1st imperfect subjunctive passive 1stPerson plural
@@ -75,16 +52,21 @@ ares,formed_from_present_stem,1st imperfect subjunctive active 1stPerson singula
 aret,formed_from_present_stem,1st imperfect subjunctive active 1stPerson singular
 aretis,formed_from_present_stem,1st imperfect subjunctive active 1stPerson singular
 aretur,formed_from_present_stem,1st imperfect subjunctive passive 3rdPerson singular
+ari,formed_from_present_stem,1st present infinitive passive
 aris,formed_from_present_stem,1st present indicative passive 2ndPerson singular
 aris,formed_from_present_stem,3rd present subjunctive passive 2ndPerson singular
 as,formed_from_present_stem,1st present indicative active 2ndPerson singular
 as,formed_from_present_stem,3rd present subjunctive active 2ndPerson singular
 at,formed_from_present_stem,1st present indicative active 3rdPerson singular
 at,formed_from_present_stem,3rd present subjunctive active 3rdPerson singular
+ate,formed_from_present_stem,1st imperative active plural
 atis,formed_from_present_stem,1st present indicative active 2ndPerson plural
 atis,formed_from_present_stem,3rd present subjunctive active 2ndPerson plural
 atur,formed_from_present_stem,1st present indicative passive 3rdPerson singular
 atur,formed_from_present_stem,3rd present subjunctive passive 3rdPerson singular
+e,formed_from_present_stem,3IO present imperative active singular
+e,formed_from_present_stem,2nd imperative active singular
+e,formed_from_present_stem,3rd imperative active singular
 eam,formed_from_present_stem,2nd present subjunctive active 1stPerson singular
 eamini,formed_from_present_stem,2nd present subjunctive passive 2ndPerson plural
 eamur,formed_from_present_stem,2nd present subjunctive passive 1stPerson plural
@@ -134,6 +116,7 @@ ebor,formed_from_present_stem,2nd future indicative passive 1stPerson singular
 ebunt,formed_from_present_stem,2nd future indicative active 3rdPerson plural
 ebuntur,formed_from_present_stem,2nd future indicative passive 3rdPerson plural
 em,formed_from_present_stem,1st present subjunctive active 1stPerson singular
+emini,formed_from_present_stem,2nd imperative passive plural
 emini,formed_from_present_stem,1st present subjunctive passive 2ndPerson plural
 emini,formed_from_present_stem,2nd present indicative passive 2ndPerson plural
 emini,formed_from_present_stem,3rd future indicative passive 2ndPerson plural
@@ -152,16 +135,48 @@ entur,formed_from_present_stem,3rd future indicative passive 3rdPerson plural
 eo,formed_from_present_stem,2nd present indicative active 1stPerson singular
 eor,formed_from_present_stem,2nd present indicative passive 1stPerson singular
 er,formed_from_present_stem,1st present subjunctive passive 1stPerson singular
+eram,formed_from_PERFECT_stem,1st pluperfect indicative active 1stPerson singular
+eram,formed_from_PERFECT_stem,2nd pluperfect indicative active 1stPerson singular
+eram,formed_from_PERFECT_stem,3rd pluperfect indicative active 1stPerson singular
+eram,formed_from_PERFECT_stem,4th pluperfect indicative active 1stPerson singular
+eramus,formed_from_PERFECT_stem,1st pluperfect indicative active 1stPerson plural
+eramus,formed_from_PERFECT_stem,2nd pluperfect indicative active 1stPerson plural
+eramus,formed_from_PERFECT_stem,3rd pluperfect indicative active 1stPerson plural
+eramus,formed_from_PERFECT_stem,4th pluperfect indicative active 1stPerson plural
+erant,formed_from_PERFECT_stem,1st pluperfect indicative active 3rdPerson plural
+erant,formed_from_PERFECT_stem,2nd pluperfect indicative active 3rdPerson plural
+erant,formed_from_PERFECT_stem,3rd pluperfect indicative active 3rdPerson plural
+erant,formed_from_PERFECT_stem,4th pluperfect indicative active 3rdPerson plural
+eras,formed_from_PERFECT_stem,1st pluperfect indicative active 2ndPerson singular
+eras,formed_from_PERFECT_stem,2nd pluperfect indicative active 2ndPerson singular
+eras,formed_from_PERFECT_stem,3rd pluperfect indicative active 2ndPerson singular
+eras,formed_from_PERFECT_stem,4th pluperfect indicative active 2ndPerson singular
+erat,formed_from_PERFECT_stem,1st pluperfect indicative active 3rdPerson singular
+erat,formed_from_PERFECT_stem,2nd pluperfect indicative active 3rdPerson singular
+erat,formed_from_PERFECT_stem,3rd pluperfect indicative active 3rdPerson singular
+erat,formed_from_PERFECT_stem,4th pluperfect indicative active 3rdPerson singular
+eratis,formed_from_PERFECT_stem,1st pluperfect indicative active 2ndPerson plural
+eratis,formed_from_PERFECT_stem,2nd pluperfect indicative active 2ndPerson plural
+eratis,formed_from_PERFECT_stem,3rd pluperfect indicative active 2ndPerson plural
+eratis,formed_from_PERFECT_stem,4th pluperfect indicative active 2ndPerson plural
+ere,formed_from_present_stem,3IO present infinitive active
+ere,formed_from_present_stem,2nd present infinitive active
+ere,formed_from_present_stem,3rd present infinitive active
+ere,formed_from_present_stem,2nd imperative passive singular
+ere,formed_from_present_stem,3rd imperative passive singular
 erem,formed_from_present_stem,2nd imperfect subjunctive active 1stPerson singular
 erem,formed_from_present_stem,3rd imperfect subjunctive active 1stPerson singular
+erem,formed_from_present_stem,3IO imperfect subjunctive active 1stPerson singular
 eremini,formed_from_present_stem,2nd imperfect subjunctive passive 2ndPerson plural
 eremini,formed_from_present_stem,3rd imperfect subjunctive passive 2ndPerson plural
 eremur,formed_from_present_stem,2nd imperfect subjunctive passive 1stPerson plural
 eremur,formed_from_present_stem,3rd imperfect subjunctive passive 1stPerson plural
 eremus,formed_from_present_stem,2nd imperfect subjunctive active 1stPerson singular
 eremus,formed_from_present_stem,3rd imperfect subjunctive active 1stPerson singular
+eremus,formed_from_present_stem,3IO imperfect subjunctive active 1stPerson plural
 erent,formed_from_present_stem,2nd imperfect subjunctive active 1stPerson singular
 erent,formed_from_present_stem,3rd imperfect subjunctive active 1stPerson singular
+erent,formed_from_present_stem,3IO imperfect subjunctive active 3rdPerson plural
 erentur,formed_from_present_stem,2nd imperfect subjunctive passive 3rdPerson plural
 erentur,formed_from_present_stem,3rd imperfect subjunctive passive 3rdPerson plural
 erer,formed_from_present_stem,2nd imperfect subjunctive passive 1stPerson singular
@@ -170,72 +185,164 @@ ereris,formed_from_present_stem,2nd imperfect subjunctive passive 2ndPerson sing
 ereris,formed_from_present_stem,3rd imperfect subjunctive passive 2ndPerson singular
 eres,formed_from_present_stem,2nd imperfect subjunctive active 1stPerson singular
 eres,formed_from_present_stem,3rd imperfect subjunctive active 1stPerson singular
+eres,formed_from_present_stem,3IO imperfect subjunctive active 2ndPerson singular
 eret,formed_from_present_stem,2nd imperfect subjunctive active 1stPerson singular
 eret,formed_from_present_stem,3rd imperfect subjunctive active 1stPerson singular
+eret,formed_from_present_stem,3IO imperfect subjunctive active 3rdPerson singular
 eretis,formed_from_present_stem,2nd imperfect subjunctive active 1stPerson singular
 eretis,formed_from_present_stem,3rd imperfect subjunctive active 1stPerson singular
+eretis,formed_from_present_stem,3IO imperfect subjunctive active 2ndPerson plural
 eretur,formed_from_present_stem,2nd imperfect subjunctive passive 3rdPerson singular
 eretur,formed_from_present_stem,3rd imperfect subjunctive passive 3rdPerson singular
+eri,formed_from_present_stem,2nd present infinitive passive
+erim,formed_from_PERFECT_stem,1st perfect subjunctive active 1stPerson singular
+erim,formed_from_PERFECT_stem,2nd perfect subjunctive active 1stPerson singular
+erim,formed_from_PERFECT_stem,3rd perfect subjunctive active 1stPerson singular
+erim,formed_from_PERFECT_stem,4th perfect subjunctive active 1stPerson singular
+erimus,formed_from_PERFECT_stem,1st future perfect indicative active 1stPerson plural
+erimus,formed_from_PERFECT_stem,1st perfect subjunctive active 1stPerson plural
+erimus,formed_from_PERFECT_stem,2nd future perfect indicative active 1stPerson plural
+erimus,formed_from_PERFECT_stem,2nd perfect subjunctive active 1stPerson plural
+erimus,formed_from_PERFECT_stem,3rd future perfect indicative active 1stPerson plural
+erimus,formed_from_PERFECT_stem,3rd perfect subjunctive active 1stPerson plural
+erimus,formed_from_PERFECT_stem,4th future perfect indicative active 1stPerson plural
+erimus,formed_from_PERFECT_stem,4th perfect subjunctive active 1stPerson plural
+erint,formed_from_PERFECT_stem,1st future perfect indicative active 3rdPerson plural
+erint,formed_from_PERFECT_stem,1st perfect subjunctive active 3rdPerson plural
+erint,formed_from_PERFECT_stem,2nd future perfect indicative active 3rdPerson plural
+erint,formed_from_PERFECT_stem,2nd perfect subjunctive active 3rdPerson plural
+erint,formed_from_PERFECT_stem,3rd future perfect indicative active 3rdPerson plural
+erint,formed_from_PERFECT_stem,3rd perfect subjunctive active 3rdPerson plural
+erint,formed_from_PERFECT_stem,4th future perfect indicative active 3rdPerson plural
+erint,formed_from_PERFECT_stem,4th perfect subjunctive active 3rdPerson plural
 eris,formed_from_present_stem,1st present subjunctive passive 2ndPerson singular
 eris,formed_from_present_stem,2nd present indicative passive 2ndPerson singular
 eris,formed_from_present_stem,3rd future indicative passive 2ndPerson singular
 eris,formed_from_present_stem,3rd present indicative passive 2ndPerson singular
+eris,formed_from_PERFECT_stem,1st future perfect indicative active 2ndPerson singular
+eris,formed_from_PERFECT_stem,1st perfect subjunctive active 2ndPerson singular
+eris,formed_from_PERFECT_stem,2nd future perfect indicative active 2ndPerson singular
+eris,formed_from_PERFECT_stem,2nd perfect subjunctive active 2ndPerson singular
+eris,formed_from_PERFECT_stem,3rd future perfect indicative active 2ndPerson singular
+eris,formed_from_PERFECT_stem,3rd perfect subjunctive active 2ndPerson singular
+eris,formed_from_PERFECT_stem,4th future perfect indicative active 2ndPerson singular
+eris,formed_from_PERFECT_stem,4th perfect subjunctive active 2ndPerson singular
+erit,formed_from_PERFECT_stem,1st future perfect indicative active 3rdPerson singular
+erit,formed_from_PERFECT_stem,1st perfect subjunctive active 3rdPerson singular
+erit,formed_from_PERFECT_stem,2nd future perfect indicative active 3rdPerson singular
+erit,formed_from_PERFECT_stem,2nd perfect subjunctive active 3rdPerson singular
+erit,formed_from_PERFECT_stem,3rd future perfect indicative active 3rdPerson singular
+erit,formed_from_PERFECT_stem,3rd perfect subjunctive active 3rdPerson singular
+erit,formed_from_PERFECT_stem,4th future perfect indicative active 3rdPerson singular
+erit,formed_from_PERFECT_stem,4th perfect subjunctive active 3rdPerson singular
+eritis,formed_from_PERFECT_stem,1st future perfect indicative active 2ndPerson plural
+eritis,formed_from_PERFECT_stem,1st perfect subjunctive active 2ndPerson plural
+eritis,formed_from_PERFECT_stem,2nd future perfect indicative active 2ndPerson plural
+eritis,formed_from_PERFECT_stem,2nd perfect subjunctive active 2ndPerson plural
+eritis,formed_from_PERFECT_stem,3rd future perfect indicative active 2ndPerson plural
+eritis,formed_from_PERFECT_stem,3rd perfect subjunctive active 2ndPerson plural
+eritis,formed_from_PERFECT_stem,4th future perfect indicative active 2ndPerson plural
+eritis,formed_from_PERFECT_stem,4th perfect subjunctive active 2ndPerson plural
+ero,formed_from_PERFECT_stem,1st future perfect indicative active 1stPerson singular
+ero,formed_from_PERFECT_stem,2nd future perfect indicative active 1stPerson singular
+ero,formed_from_PERFECT_stem,3rd future perfect indicative active 1stPerson singular
+ero,formed_from_PERFECT_stem,4th future perfect indicative active 1stPerson singular
+erunt,formed_from_PERFECT_stem,1st perfect indicative active 3rdPerson plural
+erunt,formed_from_PERFECT_stem,2nd perfect indicative active 3rdPerson plural
+erunt,formed_from_PERFECT_stem,3rd perfect indicative active 3rdPerson plural
+erunt,formed_from_PERFECT_stem,4th perfect indicative active 3rdPerson plural
 es,formed_from_present_stem,1st present subjunctive active 2ndPerson singular
 es,formed_from_present_stem,2nd present indicative active 2ndPerson singular
 es,formed_from_present_stem,3rd future indicative active 2ndPerson singular
 et,formed_from_present_stem,1st present subjunctive active 3rdPerson singular
 et,formed_from_present_stem,2nd present indicative active 3rdPerson singular
 et,formed_from_present_stem,3rd future indicative active 3rdPerson singular
+ete,formed_from_present_stem,2nd imperative active plural
 etis,formed_from_present_stem,1st present subjunctive active 2ndPerson plural
 etis,formed_from_present_stem,2nd present indicative active 2ndPerson plural
 etis,formed_from_present_stem,3rd future indicative active 2ndPerson plural
 etur,formed_from_present_stem,1st present subjunctive passive 3rdPerson singular
 etur,formed_from_present_stem,2nd present indicative passive 3rdPerson singular
 etur,formed_from_present_stem,3rd future indicative passive 3rdPerson singular
+i,formed_from_present_stem,3rd present infinitive passive
+i,formed_from_present_stem,4th imperative active singular
+i,formed_from_PERFECT_stem,1st perfect indicative active 1stPerson singular
+i,formed_from_PERFECT_stem,2nd perfect indicative active 1stPerson singular
+i,formed_from_PERFECT_stem,3rd perfect indicative active 1stPerson singular
+i,formed_from_PERFECT_stem,4th perfect indicative active 1stPerson singular
 iam,formed_from_present_stem,4th future indicative active 1stPerson singular
 iam,formed_from_present_stem,4th present subjunctive active 1stPerson singular
+iam,formed_from_present_stem,3IO future indicative active 1stPerson singular
+iam,formed_from_present_stem,3IO present subjunctive active 1stPerson singular
 iamini,formed_from_present_stem,4th present subjunctive passive 2ndPerson plural
 iamur,formed_from_present_stem,4th present subjunctive passive 1stPerson plural
 iamus,formed_from_present_stem,4th present subjunctive active 1stPerson plural
+iamus,formed_from_present_stem,3IO present subjunctive active 1stPerson plural
 iant,formed_from_present_stem,4th present subjunctive active 3rdPerson plural
+iant,formed_from_present_stem,3IO present subjunctive active 3rdPerson plural
 iantur,formed_from_present_stem,4th present subjunctive passive 3rdPerson plural
 iar,formed_from_present_stem,4th future indicative passive 1stPerson singular
 iar,formed_from_present_stem,4th present subjunctive passive 1stPerson singular
 iaris,formed_from_present_stem,4th present subjunctive passive 2ndPerson singular
 ias,formed_from_present_stem,4th present subjunctive active 2ndPerson singular
+ias,formed_from_present_stem,3IO present subjunctive active 2ndPerson singular
 iat,formed_from_present_stem,4th present subjunctive active 3rdPerson singular
+iat,formed_from_present_stem,3IO present subjunctive active 3rdPerson singular
 iatis,formed_from_present_stem,4th present subjunctive active 2ndPerson plural
+iatis,formed_from_present_stem,3IO present subjunctive active 2ndPerson plural
 iatur,formed_from_present_stem,4th present subjunctive passive 3rdPerson singular
 iebam,formed_from_present_stem,4th imperfect indicative active 1stPerson singular
+iebam,formed_from_present_stem,3IO imperfect indicative active 1stPerson singular
 iebamini,formed_from_present_stem,4th imperfect indicative passive 2ndPerson plural
 iebamur,formed_from_present_stem,4th imperfect indicative passive 1stPerson plural
 iebamus,formed_from_present_stem,4th imperfect indicative active 1stPerson plural
+iebamus,formed_from_present_stem,3IO imperfect indicative active 1stPerson plural
 iebant,formed_from_present_stem,4th imperfect indicative active 3rdPerson plural
+iebant,formed_from_present_stem,3IO imperfect indicative active 3rdPerson plural
 iebantur,formed_from_present_stem,4th imperfect indicative passive 3rdPerson plural
 iebar,formed_from_present_stem,4th imperfect indicative passive 1stPerson singular
 iebaris,formed_from_present_stem,4th imperfect indicative passive 2ndPerson singular
 iebas,formed_from_present_stem,4th imperfect indicative active 2ndPerson singular
+iebas,formed_from_present_stem,3IO imperfect indicative active 2ndPerson singular
 iebat,formed_from_present_stem,4th imperfect indicative active 3rdPerson singular
+iebat,formed_from_present_stem,3IO imperfect indicative active 3rdPerson singular
 iebatis,formed_from_present_stem,4th imperfect indicative active 2ndPerson plural
+iebatis,formed_from_present_stem,3IO imperfect indicative active 2ndPerson plural
 iebatur,formed_from_present_stem,4th imperfect indicative passive 3rdPerson singular
 iemini,formed_from_present_stem,4th future indicative passive 2ndPerson plural
 iemur,formed_from_present_stem,4th future indicative passive 1stPerson plural
 iemus,formed_from_present_stem,4th future indicative active 1stPerson plural
+iemus,formed_from_present_stem,3IO future indicative active 1stPerson plural
 ient,formed_from_present_stem,4th future indicative active 3rdPerson plural
+ient,formed_from_present_stem,3IO future indicative active 3rdPerson plural
 ientur,formed_from_present_stem,4th future indicative passive 3rdPerson plural
 ieris,formed_from_present_stem,4th future indicative passive 2ndPerson singular
 ies,formed_from_present_stem,4th future indicative active 2ndPerson singular
+ies,formed_from_present_stem,3IO future indicative active 2ndPerson singular
 iet,formed_from_present_stem,4th future indicative active 3rdPerson singular
+iet,formed_from_present_stem,3IO future indicative active 3rdPerson singular
 ietis,formed_from_present_stem,4th future indicative active 2ndPerson plural
+ietis,formed_from_present_stem,3IO future indicative active 2ndPerson plural
 ietur,formed_from_present_stem,4th future indicative passive 3rdPerson singular
+imini,formed_from_present_stem,3rd imperative passive plural
+imini,formed_from_present_stem,4th imperative passive plural
 imini,formed_from_present_stem,3rd present indicative passive 2ndPerson plural
 imini,formed_from_present_stem,4th present indicative passive 2ndPerson plural
 imur,formed_from_present_stem,3rd present indicative passive 1stPerson plural
 imur,formed_from_present_stem,4th present indicative passive 1stPerson plural
 imus,formed_from_present_stem,3rd present indicative active 1stPerson plural
 imus,formed_from_present_stem,4th present indicative active 1stPerson plural
+imus,formed_from_present_stem,3IO present indicative active 1stPerson plural
+imus,formed_from_PERFECT_stem,1st perfect indicative active 1stPerson plural
+imus,formed_from_PERFECT_stem,2nd perfect indicative active 1stPerson plural
+imus,formed_from_PERFECT_stem,3rd perfect indicative active 1stPerson plural
+imus,formed_from_PERFECT_stem,4th perfect indicative active 1stPerson plural
 io,formed_from_present_stem,4th present indicative active 1stPerson singular
+io,formed_from_present_stem,3IO present indicative active 1stPerson singular
 ior,formed_from_present_stem,4th present indicative passive 1stPerson singular
+ire,formed_from_present_stem,4th present infinitive active
+ire,formed_from_present_stem,4th present infinitive passive
+ire,formed_from_present_stem,4th imperative passive singular
 irem,formed_from_present_stem,4th imperfect subjunctive active 1stPerson singular
 iremini,formed_from_present_stem,4th imperfect subjunctive passive 2ndPerson plural
 iremur,formed_from_present_stem,4th imperfect subjunctive passive 1stPerson plural
@@ -251,13 +358,60 @@ iretur,formed_from_present_stem,4th imperfect subjunctive passive 3rdPerson sing
 iris,formed_from_present_stem,4th present indicative passive 2ndPerson singular
 is,formed_from_present_stem,3rd present indicative active 2ndPerson singular
 is,formed_from_present_stem,4th present indicative active 2ndPerson singular
+is,formed_from_present_stem,3IO present indicative active 2ndPerson singular
+isse,formed_from_PERFECT_stem,1st perfect infinitive active
+isse,formed_from_PERFECT_stem,2nd perfect infinitive active
+isse,formed_from_PERFECT_stem,3rd perfect infinitive active
+isse,formed_from_PERFECT_stem,4th perfect infinitive active
+issem,formed_from_PERFECT_stem,1st pluperfect subjunctive active 1stPerson singular
+issem,formed_from_PERFECT_stem,2nd pluperfect subjunctive active 1stPerson singular
+issem,formed_from_PERFECT_stem,3rd pluperfect subjunctive active 1stPerson singular
+issem,formed_from_PERFECT_stem,4th pluperfect subjunctive active 1stPerson singular
+issemus,formed_from_PERFECT_stem,1st pluperfect subjunctive active 1stPerson plural
+issemus,formed_from_PERFECT_stem,2nd pluperfect subjunctive active 1stPerson plural
+issemus,formed_from_PERFECT_stem,3rd pluperfect subjunctive active 1stPerson plural
+issemus,formed_from_PERFECT_stem,4th pluperfect subjunctive active 1stPerson plural
+issent,formed_from_PERFECT_stem,1st pluperfect subjunctive active 3rdPerson plural
+issent,formed_from_PERFECT_stem,2nd pluperfect subjunctive active 3rdPerson plural
+issent,formed_from_PERFECT_stem,3rd pluperfect subjunctive active 3rdPerson plural
+issent,formed_from_PERFECT_stem,4th pluperfect subjunctive active 3rdPerson plural
+isses,formed_from_PERFECT_stem,1st pluperfect subjunctive active 2ndPerson singular
+isses,formed_from_PERFECT_stem,2nd pluperfect subjunctive active 2ndPerson singular
+isses,formed_from_PERFECT_stem,3rd pluperfect subjunctive active 2ndPerson singular
+isses,formed_from_PERFECT_stem,4th pluperfect subjunctive active 2ndPerson singular
+isset,formed_from_PERFECT_stem,1st pluperfect subjunctive active 3rdPerson singular
+isset,formed_from_PERFECT_stem,2nd pluperfect subjunctive active 3rdPerson singular
+isset,formed_from_PERFECT_stem,3rd pluperfect subjunctive active 3rdPerson singular
+isset,formed_from_PERFECT_stem,4th pluperfect subjunctive active 3rdPerson singular
+issetis,formed_from_PERFECT_stem,1st pluperfect subjunctive active 2ndPerson plural
+issetis,formed_from_PERFECT_stem,2nd pluperfect subjunctive active 2ndPerson plural
+issetis,formed_from_PERFECT_stem,3rd pluperfect subjunctive active 2ndPerson plural
+issetis,formed_from_PERFECT_stem,4th pluperfect subjunctive active 2ndPerson plural
+isti,formed_from_PERFECT_stem,1st perfect indicative active 2ndPerson singular
+isti,formed_from_PERFECT_stem,2nd perfect indicative active 2ndPerson singular
+isti,formed_from_PERFECT_stem,3rd perfect indicative active 2ndPerson singular
+isti,formed_from_PERFECT_stem,4th perfect indicative active 2ndPerson singular
+istis,formed_from_PERFECT_stem,1st perfect indicative active 2ndPerson plural
+istis,formed_from_PERFECT_stem,2nd perfect indicative active 2ndPerson plural
+istis,formed_from_PERFECT_stem,3rd perfect indicative active 2ndPerson plural
+istis,formed_from_PERFECT_stem,4th perfect indicative active 2ndPerson plural
 it,formed_from_present_stem,3rd present indicative active 3rdPerson singular
 it,formed_from_present_stem,4th present indicative active 3rdPerson singular
+it,formed_from_present_stem,3IO present indicative active 3rdPerson singular
+it,formed_from_PERFECT_stem,1st perfect indicative active 3rdPerson singular
+it,formed_from_PERFECT_stem,2nd perfect indicative active 3rdPerson singular
+it,formed_from_PERFECT_stem,3rd perfect indicative active 3rdPerson singular
+it,formed_from_PERFECT_stem,4th perfect indicative active 3rdPerson singular
 it is,formed_from_present_stem,4th present indicative active 2ndPerson plural
+ite,formed_from_present_stem,3IO present imperative active plural
+ite,formed_from_present_stem,3rd imperative active plural
+ite,formed_from_present_stem,4th imperative active plural
 itis,formed_from_present_stem,3rd present indicative active 2ndPerson plural
+itis,formed_from_present_stem,3IO present indicative active 2ndPerson plural
 itur,formed_from_present_stem,3rd present indicative passive 3rdPerson singular
 itur,formed_from_present_stem,4th present indicative passive 3rdPerson singular
 iunt,formed_from_present_stem,4th present indicative active 3rdPerson plural
+iunt,formed_from_present_stem,3IO present indicative active 3rdPerson plural
 iuntur,formed_from_present_stem,4th present indicative passive 3rdPerson plural
 o,formed_from_present_stem,1st present indicative active 1stPerson singular
 o,formed_from_present_stem,3rd present indicative active 1stPerson singular
@@ -265,157 +419,33 @@ or,formed_from_present_stem,1st present indicative passive 1stPerson singular
 or,formed_from_present_stem,3rd present indicative passive 1stPerson singular
 unt,formed_from_present_stem,3rd present indicative active 3rdPerson plural
 untur,formed_from_present_stem,3rd present indicative passive 3rdPerson plural
-io,formed_from_present_stem,3IO present indicative active 1stPerson singular
-is,formed_from_present_stem,3IO present indicative active 2ndPerson singular
-it,formed_from_present_stem,3IO present indicative active 3rdPerson singular
-imus,formed_from_present_stem,3IO present indicative active 1stPerson plural
-itis,formed_from_present_stem,3IO present indicative active 2ndPerson plural
-iunt,formed_from_present_stem,3IO present indicative active 3rdPerson plural
-iebam,formed_from_present_stem,3IO imperfect indicative active 1stPerson singular
-iebas,formed_from_present_stem,3IO imperfect indicative active 2ndPerson singular
-iebat,formed_from_present_stem,3IO imperfect indicative active 3rdPerson singular
-iebamus,formed_from_present_stem,3IO imperfect indicative active 1stPerson plural
-iebatis,formed_from_present_stem,3IO imperfect indicative active 2ndPerson plural
-iebant,formed_from_present_stem,3IO imperfect indicative active 3rdPerson plural
-iam,formed_from_present_stem,3IO future indicative active 1stPerson singular
-ies,formed_from_present_stem,3IO future indicative active 2ndPerson singular
-iet,formed_from_present_stem,3IO future indicative active 3rdPerson singular
-iemus,formed_from_present_stem,3IO future indicative active 1stPerson plural
-ietis,formed_from_present_stem,3IO future indicative active 2ndPerson plural
-ient,formed_from_present_stem,3IO future indicative active 3rdPerson plural
-iam,formed_from_present_stem,3IO present subjunctive active 1stPerson singular
-ias,formed_from_present_stem,3IO present subjunctive active 2ndPerson singular
-iat,formed_from_present_stem,3IO present subjunctive active 3rdPerson singular
-iamus,formed_from_present_stem,3IO present subjunctive active 1stPerson plural
-iatis,formed_from_present_stem,3IO present subjunctive active 2ndPerson plural
-iant,formed_from_present_stem,3IO present subjunctive active 3rdPerson plural
-erem,formed_from_present_stem,3IO imperfect subjunctive active 1stPerson singular
-eres,formed_from_present_stem,3IO imperfect subjunctive active 2ndPerson singular
-eret,formed_from_present_stem,3IO imperfect subjunctive active 3rdPerson singular
-eremus,formed_from_present_stem,3IO imperfect subjunctive active 1stPerson plural
-eretis,formed_from_present_stem,3IO imperfect subjunctive active 2ndPerson plural
-erent,formed_from_present_stem,3IO imperfect subjunctive active 3rdPerson plural
-i,formed_from_PERFECT_stem,1st perfect indicative active 1stPerson singular
-isti,formed_from_PERFECT_stem,1st perfect indicative active 2ndPerson singular
-it,formed_from_PERFECT_stem,1st perfect indicative active 3rdPerson singular
-imus,formed_from_PERFECT_stem,1st perfect indicative active 1stPerson plural
-istis,formed_from_PERFECT_stem,1st perfect indicative active 2ndPerson plural
-erunt,formed_from_PERFECT_stem,1st perfect indicative active 3rdPerson plural
-eram,formed_from_PERFECT_stem,1st pluperfect indicative active 1stPerson singular
-eras,formed_from_PERFECT_stem,1st pluperfect indicative active 2ndPerson singular
-erat,formed_from_PERFECT_stem,1st pluperfect indicative active 3rdPerson singular
-eramus,formed_from_PERFECT_stem,1st pluperfect indicative active 1stPerson plural
-eratis,formed_from_PERFECT_stem,1st pluperfect indicative active 2ndPerson plural
-erant,formed_from_PERFECT_stem,1st pluperfect indicative active 3rdPerson plural
-ero,formed_from_PERFECT_stem,1st future perfect indicative active 1stPerson singular
-eris,formed_from_PERFECT_stem,1st future perfect indicative active 2ndPerson singular
-erit,formed_from_PERFECT_stem,1st future perfect indicative active 3rdPerson singular
-erimus,formed_from_PERFECT_stem,1st future perfect indicative active 1stPerson plural
-eritis,formed_from_PERFECT_stem,1st future perfect indicative active 2ndPerson plural
-erint,formed_from_PERFECT_stem,1st future perfect indicative active 3rdPerson plural
-erim,formed_from_PERFECT_stem,1st perfect subjunctive active 1stPerson singular
-eris,formed_from_PERFECT_stem,1st perfect subjunctive active 2ndPerson singular
-erit,formed_from_PERFECT_stem,1st perfect subjunctive active 3rdPerson singular
-erimus,formed_from_PERFECT_stem,1st perfect subjunctive active 1stPerson plural
-eritis,formed_from_PERFECT_stem,1st perfect subjunctive active 2ndPerson plural
-erint,formed_from_PERFECT_stem,1st perfect subjunctive active 3rdPerson plural
-issem,formed_from_PERFECT_stem,1st pluperfect subjunctive active 1stPerson singular
-isses,formed_from_PERFECT_stem,1st pluperfect subjunctive active 2ndPerson singular
-isset,formed_from_PERFECT_stem,1st pluperfect subjunctive active 3rdPerson singular
-issemus,formed_from_PERFECT_stem,1st pluperfect subjunctive active 1stPerson plural
-issetis,formed_from_PERFECT_stem,1st pluperfect subjunctive active 2ndPerson plural
-issent,formed_from_PERFECT_stem,1st pluperfect subjunctive active 3rdPerson plural
-i,formed_from_PERFECT_stem,2nd perfect indicative active 1stPerson singular
-isti,formed_from_PERFECT_stem,2nd perfect indicative active 2ndPerson singular
-it,formed_from_PERFECT_stem,2nd perfect indicative active 3rdPerson singular
-imus,formed_from_PERFECT_stem,2nd perfect indicative active 1stPerson plural
-istis,formed_from_PERFECT_stem,2nd perfect indicative active 2ndPerson plural
-erunt,formed_from_PERFECT_stem,2nd perfect indicative active 3rdPerson plural
-eram,formed_from_PERFECT_stem,2nd pluperfect indicative active 1stPerson singular
-eras,formed_from_PERFECT_stem,2nd pluperfect indicative active 2ndPerson singular
-erat,formed_from_PERFECT_stem,2nd pluperfect indicative active 3rdPerson singular
-eramus,formed_from_PERFECT_stem,2nd pluperfect indicative active 1stPerson plural
-eratis,formed_from_PERFECT_stem,2nd pluperfect indicative active 2ndPerson plural
-erant,formed_from_PERFECT_stem,2nd pluperfect indicative active 3rdPerson plural
-ero,formed_from_PERFECT_stem,2nd future perfect indicative active 1stPerson singular
-eris,formed_from_PERFECT_stem,2nd future perfect indicative active 2ndPerson singular
-erit,formed_from_PERFECT_stem,2nd future perfect indicative active 3rdPerson singular
-erimus,formed_from_PERFECT_stem,2nd future perfect indicative active 1stPerson plural
-eritis,formed_from_PERFECT_stem,2nd future perfect indicative active 2ndPerson plural
-erint,formed_from_PERFECT_stem,2nd future perfect indicative active 3rdPerson plural
-erim,formed_from_PERFECT_stem,2nd perfect subjunctive active 1stPerson singular
-eris,formed_from_PERFECT_stem,2nd perfect subjunctive active 2ndPerson singular
-erit,formed_from_PERFECT_stem,2nd perfect subjunctive active 3rdPerson singular
-erimus,formed_from_PERFECT_stem,2nd perfect subjunctive active 1stPerson plural
-eritis,formed_from_PERFECT_stem,2nd perfect subjunctive active 2ndPerson plural
-erint,formed_from_PERFECT_stem,2nd perfect subjunctive active 3rdPerson plural
-issem,formed_from_PERFECT_stem,2nd pluperfect subjunctive active 1stPerson singular
-isses,formed_from_PERFECT_stem,2nd pluperfect subjunctive active 2ndPerson singular
-isset,formed_from_PERFECT_stem,2nd pluperfect subjunctive active 3rdPerson singular
-issemus,formed_from_PERFECT_stem,2nd pluperfect subjunctive active 1stPerson plural
-issetis,formed_from_PERFECT_stem,2nd pluperfect subjunctive active 2ndPerson plural
-issent,formed_from_PERFECT_stem,2nd pluperfect subjunctive active 3rdPerson plural
-i,formed_from_PERFECT_stem,3rd perfect indicative active 1stPerson singular
-isti,formed_from_PERFECT_stem,3rd perfect indicative active 2ndPerson singular
-it,formed_from_PERFECT_stem,3rd perfect indicative active 3rdPerson singular
-imus,formed_from_PERFECT_stem,3rd perfect indicative active 1stPerson plural
-istis,formed_from_PERFECT_stem,3rd perfect indicative active 2ndPerson plural
-erunt,formed_from_PERFECT_stem,3rd perfect indicative active 3rdPerson plural
-eram,formed_from_PERFECT_stem,3rd pluperfect indicative active 1stPerson singular
-eras,formed_from_PERFECT_stem,3rd pluperfect indicative active 2ndPerson singular
-erat,formed_from_PERFECT_stem,3rd pluperfect indicative active 3rdPerson singular
-eramus,formed_from_PERFECT_stem,3rd pluperfect indicative active 1stPerson plural
-eratis,formed_from_PERFECT_stem,3rd pluperfect indicative active 2ndPerson plural
-erant,formed_from_PERFECT_stem,3rd pluperfect indicative active 3rdPerson plural
-ero,formed_from_PERFECT_stem,3rd future perfect indicative active 1stPerson singular
-eris,formed_from_PERFECT_stem,3rd future perfect indicative active 2ndPerson singular
-erit,formed_from_PERFECT_stem,3rd future perfect indicative active 3rdPerson singular
-erimus,formed_from_PERFECT_stem,3rd future perfect indicative active 1stPerson plural
-eritis,formed_from_PERFECT_stem,3rd future perfect indicative active 2ndPerson plural
-erint,formed_from_PERFECT_stem,3rd future perfect indicative active 3rdPerson plural
-erim,formed_from_PERFECT_stem,3rd perfect subjunctive active 1stPerson singular
-eris,formed_from_PERFECT_stem,3rd perfect subjunctive active 2ndPerson singular
-erit,formed_from_PERFECT_stem,3rd perfect subjunctive active 3rdPerson singular
-erimus,formed_from_PERFECT_stem,3rd perfect subjunctive active 1stPerson plural
-eritis,formed_from_PERFECT_stem,3rd perfect subjunctive active 2ndPerson plural
-erint,formed_from_PERFECT_stem,3rd perfect subjunctive active 3rdPerson plural
-issem,formed_from_PERFECT_stem,3rd pluperfect subjunctive active 1stPerson singular
-isses,formed_from_PERFECT_stem,3rd pluperfect subjunctive active 2ndPerson singular
-isset,formed_from_PERFECT_stem,3rd pluperfect subjunctive active 3rdPerson singular
-issemus,formed_from_PERFECT_stem,3rd pluperfect subjunctive active 1stPerson plural
-issetis,formed_from_PERFECT_stem,3rd pluperfect subjunctive active 2ndPerson plural
-issent,formed_from_PERFECT_stem,3rd pluperfect subjunctive active 3rdPerson plural
-i,formed_from_PERFECT_stem,4th perfect indicative active 1stPerson singular
-isti,formed_from_PERFECT_stem,4th perfect indicative active 2ndPerson singular
-it,formed_from_PERFECT_stem,4th perfect indicative active 3rdPerson singular
-imus,formed_from_PERFECT_stem,4th perfect indicative active 1stPerson plural
-istis,formed_from_PERFECT_stem,4th perfect indicative active 2ndPerson plural
-erunt,formed_from_PERFECT_stem,4th perfect indicative active 3rdPerson plural
-eram,formed_from_PERFECT_stem,4th pluperfect indicative active 1stPerson singular
-eras,formed_from_PERFECT_stem,4th pluperfect indicative active 2ndPerson singular
-erat,formed_from_PERFECT_stem,4th pluperfect indicative active 3rdPerson singular
-eramus,formed_from_PERFECT_stem,4th pluperfect indicative active 1stPerson plural
-eratis,formed_from_PERFECT_stem,4th pluperfect indicative active 2ndPerson plural
-erant,formed_from_PERFECT_stem,4th pluperfect indicative active 3rdPerson plural
-ero,formed_from_PERFECT_stem,4th future perfect indicative active 1stPerson singular
-eris,formed_from_PERFECT_stem,4th future perfect indicative active 2ndPerson singular
-erit,formed_from_PERFECT_stem,4th future perfect indicative active 3rdPerson singular
-erimus,formed_from_PERFECT_stem,4th future perfect indicative active 1stPerson plural
-eritis,formed_from_PERFECT_stem,4th future perfect indicative active 2ndPerson plural
-erint,formed_from_PERFECT_stem,4th future perfect indicative active 3rdPerson plural
-erim,formed_from_PERFECT_stem,4th perfect subjunctive active 1stPerson singular
-eris,formed_from_PERFECT_stem,4th perfect subjunctive active 2ndPerson singular
-erit,formed_from_PERFECT_stem,4th perfect subjunctive active 3rdPerson singular
-erimus,formed_from_PERFECT_stem,4th perfect subjunctive active 1stPerson plural
-eritis,formed_from_PERFECT_stem,4th perfect subjunctive active 2ndPerson plural
-erint,formed_from_PERFECT_stem,4th perfect subjunctive active 3rdPerson plural
-issem,formed_from_PERFECT_stem,4th pluperfect subjunctive active 1stPerson singular
-isses,formed_from_PERFECT_stem,4th pluperfect subjunctive active 2ndPerson singular
-isset,formed_from_PERFECT_stem,4th pluperfect subjunctive active 3rdPerson singular
-issemus,formed_from_PERFECT_stem,4th pluperfect subjunctive active 1stPerson plural
-issetis,formed_from_PERFECT_stem,4th pluperfect subjunctive active 2ndPerson plural
-issent,formed_from_PERFECT_stem,4th pluperfect subjunctive active 3rdPerson plural
-isse,formed_from_PERFECT_stem,1st perfect infinitive active
-isse,formed_from_PERFECT_stem,2nd perfect infinitive active
-isse,formed_from_PERFECT_stem,3rd perfect infinitive active
-isse,formed_from_PERFECT_stem,4th perfect infinitive active
+us,formed_from_PPP,perfect participle passive (PPP) masculine singular nominative
+i,formed_from_PPP,perfect participle passive (PPP) masculine singular genitive
+o,formed_from_PPP,perfect participle passive (PPP) masculine singular dative
+um,formed_from_PPP,perfect participle passive (PPP) masculine singular accusative
+o,formed_from_PPP,perfect participle passive (PPP) masculine singular ablative
+i,formed_from_PPP,perfect participle passive (PPP) masculine plural nominative
+orum,formed_from_PPP,perfect participle passive (PPP) masculine plural genitive
+is,formed_from_PPP,perfect participle passive (PPP) masculine plural dative
+os,formed_from_PPP,perfect participle passive (PPP) masculine plural accusative
+is,formed_from_PPP,perfect participle passive (PPP) masculine plural ablative
+a,formed_from_PPP,perfect participle passive (PPP) feminine singular nominative
+ae,formed_from_PPP,perfect participle passive (PPP) feminine singular genitive
+ae,formed_from_PPP,perfect participle passive (PPP) feminine singular dative
+am,formed_from_PPP,perfect participle passive (PPP) feminine singular accusative
+a,formed_from_PPP,perfect participle passive (PPP) feminine singular ablative
+ae,formed_from_PPP,perfect participle passive (PPP) feminine plural nominative
+arum,formed_from_PPP,perfect participle passive (PPP) feminine plural genitive
+is,formed_from_PPP,perfect participle passive (PPP) feminine plural dative
+as,formed_from_PPP,perfect participle passive (PPP) feminine plural accusative
+is,formed_from_PPP,perfect participle passive (PPP) feminine plural ablative
+um,formed_from_PPP,perfect participle passive (PPP) neuter singular nominative
+i,formed_from_PPP,perfect participle passive (PPP) neuter singular genitive
+o,formed_from_PPP,perfect participle passive (PPP) neuter singular dative
+um,formed_from_PPP,perfect participle passive (PPP) neuter singular accusative
+o,formed_from_PPP,perfect participle passive (PPP) neuter singular ablative
+a,formed_from_PPP,perfect participle passive (PPP) neuter plural nominative
+orum,formed_from_PPP,perfect participle passive (PPP) neuter plural genitive
+is,formed_from_PPP,perfect participle passive (PPP) neuter plural dative
+a,formed_from_PPP,perfect participle passive (PPP) neuter plural accusative
+is,formed_from_PPP,perfect participle passive (PPP) neuter plural ablative

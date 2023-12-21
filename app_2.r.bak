@@ -4,7 +4,6 @@
 #allPossibleLatinRoots <- testdict[which(sapply(testdict, function(X){startsWith("Mickey", X)}))]
 #thisLatinRoot <- allPossibleLatinRoots[max(sapply(allPossibleLatinRoots, nchar))]
 #
-
 ui <- fluidPage	(
 				textInput	(
 							"userEnteredString",
@@ -75,11 +74,16 @@ server <- function(input, output)
 								{
 								r$outMat <- rbind(r$outMat, r$conjAndPP[i])
 								}
+							# print(r$outMat)
+							# print("#")
+							# print("#")
+							# print("#")
 							output$translationGuide <- renderTable	(
 																	r$outMat,
 																	#rownames=TRUE,
 																	colnames=FALSE
 																	)
+							print("Rendered.")
 							} else	{
 									output$translationGuide <- renderText("This word does not appear to be in this app's dictionary - make sure it is spelled correctly, is a regular verb, and if in a form derived from the PPP, does not include a space or linking verb.") 
 									}
