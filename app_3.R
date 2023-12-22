@@ -54,40 +54,23 @@ server <- function(input, output)
 															thisLatinRoot <- APLRWANTWI[which(sapply(APLRWANTWI,nchar) == max(sapply(APLRWANTWI,nchar)))]
 															thisLatinEnding <- substr(input$userEnteredString, nchar(thisLatinRoot)+1, nchar(input$userEnteredString))
 															dictHits <- dict[which(dict[,2] == thisLatinRoot), ]
+															outMat <- matrix(nrow=1, ncol=4, data=c(paste0(thisLatinRoot, "-"), paste0("-", thisLatinEnding))) 
+															
+															
+															
+															
 															if ("matrix" %in% class(dictHits)) # 2 or more rows returned
 																{
-																conjAndPP <- character(0)
-																for (i in 1:nrow(dictHits))
+																outMat[1,3] <- stringi::stri_flatten(c(dictHits[1,1], dictHits[1,4]), collapse=" ")
+																outMat[1,4] <- dictHits[1,3]
+																for (i in 2:nrow(dictHits))
 																	{
-																	conjAndPP <- c	(
-																					conjAndPP,
-																					stringi::stri_flatten(c(dictHits[i,1], dictHits[i,4]), collapse=" ") 
-																					)
+																	outMat <- rbind(outMat, c("", "", stringi::stri_flatten(c(dictHits[i,1], dictHits[i,4]), collapse=" "), dictHits[1,3])) 
 																	}
 																} else	{ # 1 row returned
-																		conjAndPP <- stringi::stri_flatten(c(dictHits[1], dictHits[4]), collapse=" ")
+																		outMat[1,3] <- stringi::stri_flatten(c(dictHits[1], dictHits[4]), collapse=" ")
+																		outMat[1,4] <- dictHits[3]
 																		}
-															outMat <- matrix(nrow=1, ncol=3, data=c(paste0(thisLatinRoot, "-"), paste0("-", thisLatinEnding))) 
-															for (i in 1:length(conjAndPP))
-																{
-																if (endsWith(conjAndPP[i], " PPP"))
-																	{
-																	casePossibilities <- casePoss[which(apply(casePoss,1,function(X){X[1]==thisLatinEnding & X[2]=="formed_from_PPP"})), 3] 
-																	outMat[1,3] <- casePossibilities[1]
-																	if (length(casePossibilities) < 1)
-																		{
-																		for (j in 2:length(casePossibilities))
-																			{
-																			outMat <- rbind	(
-																							outMat,
-																							c("", "", casePossibilities[j])
-																							)
-																			}
-																		}
-																	} else	{
-																			outMat[1,3] <- conjAndPP[i]
-																			}
-																}
 															###
 															###
 															###
